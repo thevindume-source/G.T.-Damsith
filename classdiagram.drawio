@@ -1,0 +1,103 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="GreenLoop_UseCase.drawio" id="r78CCtu83wphsBXd6Ps5">
+    <mxGraphModel dx="2723" dy="3222" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-74" parent="1" style="text;html=1;fontSize=15;fontStyle=1;strokeColor=none;fillColor=none;align=center;" value="GreenLoop Management System - Class Diagram" vertex="1">
+          <mxGeometry height="40" width="700" x="170" y="-1180" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-75" parent="1" style="swimlane;html=1;whiteSpace=wrap;fillColor=#eef7ff;strokeColor=#1f4e79;fontStyle=0;align=left;verticalAlign=top;spacing=8;fontSize=15;" value="&lt;b&gt;Product&lt;/b&gt;&lt;hr&gt;- productId : int&lt;br&gt;- name : String&lt;br&gt;- type : String&lt;br&gt;- price : double&lt;br&gt;- ecoRating : int&lt;hr&gt;+ getProductId() : int&lt;br&gt;+ setProductId(int) : void&lt;br&gt;+ getName() : String&lt;br&gt;+ setPrice(double) : void" vertex="1">
+          <mxGeometry height="230" width="270" x="-90" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-76" parent="1" style="swimlane;html=1;whiteSpace=wrap;fillColor=#eef7ff;strokeColor=#1f4e79;fontStyle=0;align=left;verticalAlign=top;spacing=8;fontSize=15;" value="&lt;b&gt;Client&lt;/b&gt;&lt;hr&gt;- clientId : int&lt;br&gt;- name : String&lt;br&gt;- phone : String&lt;br&gt;- email : String&lt;br&gt;- address : String&lt;hr&gt;+ getClientId() : int&lt;br&gt;+ setClientId(int) : void&lt;br&gt;+ getEmail() : String" vertex="1">
+          <mxGeometry height="230" width="270" x="1250" y="-170" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-77" parent="1" style="swimlane;html=1;whiteSpace=wrap;fillColor=#eef7ff;strokeColor=#1f4e79;fontStyle=0;align=left;verticalAlign=top;spacing=8;fontSize=15;" value="&lt;b&gt;Inventory&lt;/b&gt;&lt;hr&gt;- inventoryId : int&lt;br&gt;- productId : int&lt;br&gt;- quantity : int&lt;br&gt;- reorderLevel : int&lt;br&gt;- supplier : String&lt;hr&gt;+ addStock() : void&lt;br&gt;+ updateStock() : void&lt;br&gt;+ checkLowStock() : boolean" vertex="1">
+          <mxGeometry height="230" width="270" x="-80" y="-250" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-78" parent="1" style="swimlane;html=1;whiteSpace=wrap;fillColor=#eef7ff;strokeColor=#1f4e79;fontStyle=0;align=left;verticalAlign=top;spacing=8;fontSize=15;" value="&lt;b&gt;DeliveryAgent&lt;/b&gt;&lt;hr&gt;- agentId : int&lt;br&gt;- name : String&lt;br&gt;- phone : String&lt;br&gt;- email : String&lt;br&gt;- vehicleNo : String&lt;br&gt;- vehicleType : String&lt;hr&gt;+ getAgentId() : int&lt;br&gt;+ getName() : String&lt;br&gt;+ setVehicleNo(String) : void" vertex="1">
+          <mxGeometry height="230" width="270" x="1040" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-79" parent="1" style="swimlane;html=1;whiteSpace=wrap;fillColor=#eef7ff;strokeColor=#1f4e79;fontStyle=0;align=left;verticalAlign=top;spacing=8;fontSize=15;" value="&lt;b&gt;Order&lt;/b&gt;&lt;hr&gt;- orderId : int&lt;br&gt;- clientId : int&lt;br&gt;- orderDate : Date&lt;br&gt;- total : double&lt;br&gt;- status : String&lt;hr&gt;+ createOrder() : int&lt;br&gt;+ calculateTotal() : double&lt;br&gt;+ updateStatus(String) : void" vertex="1">
+          <mxGeometry height="230" width="270" x="760" y="-170" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-80" parent="1" style="swimlane;html=1;whiteSpace=wrap;fillColor=#eef7ff;strokeColor=#1f4e79;fontStyle=0;align=left;verticalAlign=top;spacing=8;fontSize=15;" value="&lt;b&gt;OrderItem&lt;/b&gt;&lt;hr&gt;- itemId : int&lt;br&gt;- orderId : int&lt;br&gt;- productId : int&lt;br&gt;- quantity : int&lt;br&gt;- price : double&lt;hr&gt;+ calculateSubTotal() : double" vertex="1">
+          <mxGeometry height="230" width="270" x="330" y="-170" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-81" parent="1" style="swimlane;html=1;whiteSpace=wrap;fillColor=#eef7ff;strokeColor=#1f4e79;fontStyle=0;align=left;verticalAlign=top;spacing=8;fontSize=15;" value="&lt;b&gt;Delivery&lt;/b&gt;&lt;hr&gt;- deliveryId : int&lt;br&gt;- orderId : int&lt;br&gt;- agentId : int&lt;br&gt;- deliveryDate : Date&lt;br&gt;- status : String&lt;hr&gt;+ assignDelivery() : void&lt;br&gt;+ updateDeliveryStatus(String) : void" vertex="1">
+          <mxGeometry height="230" width="270" x="760" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-82" parent="1" style="swimlane;html=1;whiteSpace=wrap;fillColor=#eef7ff;strokeColor=#1f4e79;fontStyle=0;align=left;verticalAlign=top;spacing=8;fontSize=15;" value="&lt;b&gt;UserDAO&lt;/b&gt;&lt;hr&gt;+ login(username:String, password:String) : boolean&lt;hr&gt;+ validateUser() : boolean" vertex="1">
+          <mxGeometry height="230" width="270" x="720" y="-1080" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-83" parent="1" style="swimlane;html=1;whiteSpace=wrap;fillColor=#eef7ff;strokeColor=#1f4e79;fontStyle=0;align=left;verticalAlign=top;spacing=8;fontSize=15;" value="&lt;b&gt;ProductDAO&lt;/b&gt;&lt;hr&gt;+ add(Product) : void&lt;br&gt;+ update(Product) : void&lt;br&gt;+ delete(id:int) : void&lt;br&gt;+ getAll() : ArrayList&lt;hr&gt;+ executeProductQuery() : void" vertex="1">
+          <mxGeometry height="230" width="270" x="-470" y="-400" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-84" parent="1" style="swimlane;html=1;whiteSpace=wrap;fillColor=#eef7ff;strokeColor=#1f4e79;fontStyle=0;align=left;verticalAlign=top;spacing=8;fontSize=15;" value="&lt;b&gt;OrderDAO&lt;/b&gt;&lt;hr&gt;+ createOrder(clientId:int, items:Map) : int&lt;br&gt;+ getAllOrders() : Vector&lt;hr&gt;+ saveOrderItems() : void" vertex="1">
+          <mxGeometry height="230" width="270" x="760" y="-660" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-85" parent="1" style="swimlane;html=1;whiteSpace=wrap;fillColor=#eef7ff;strokeColor=#1f4e79;fontStyle=0;align=left;verticalAlign=top;spacing=8;fontSize=15;" value="&lt;b&gt;ReportDAO&lt;/b&gt;&lt;hr&gt;+ lowStockReport() : Vector&lt;br&gt;+ revenueReport() : Vector&lt;hr&gt;+ generateReport() : void" vertex="1">
+          <mxGeometry height="230" width="270" x="130" y="-680" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-86" parent="1" style="swimlane;html=1;whiteSpace=wrap;fillColor=#eef7ff;strokeColor=#1f4e79;fontStyle=0;align=left;verticalAlign=top;spacing=8;fontSize=15;" value="&lt;b&gt;EmailService&lt;/b&gt;&lt;hr&gt;- fromEmail : String&lt;br&gt;- appPassword : String&lt;hr&gt;+ sendEmail(to:String, subject:String, body:String) : void" vertex="1">
+          <mxGeometry height="230" width="270" x="1250" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-87" parent="1" style="swimlane;html=1;whiteSpace=wrap;fillColor=#eef7ff;strokeColor=#1f4e79;fontStyle=0;align=left;verticalAlign=top;spacing=8;fontSize=15;" value="&lt;b&gt;DBConnection&lt;/b&gt;&lt;hr&gt;- URL : String&lt;br&gt;- USER : String&lt;br&gt;- PASSWORD : String&lt;hr&gt;+ getConnection() : Connection" vertex="1">
+          <mxGeometry height="230" width="270" x="140" y="-1080" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-88" edge="1" parent="1" source="WCokH3vuHozdB8c-ti5Q-76" style="endArrow=none;html=1;rounded=0;strokeWidth=2;fontSize=15;" target="WCokH3vuHozdB8c-ti5Q-79" value="1 places 0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-89" edge="1" parent="1" source="WCokH3vuHozdB8c-ti5Q-79" style="endArrow=none;html=1;rounded=0;strokeWidth=2;fontSize=15;" target="WCokH3vuHozdB8c-ti5Q-80" value="1 contains 1..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-90" edge="1" parent="1" source="WCokH3vuHozdB8c-ti5Q-75" style="endArrow=none;html=1;rounded=0;strokeWidth=2;fontSize=15;" target="WCokH3vuHozdB8c-ti5Q-80" value="1 used in 0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-91" edge="1" parent="1" source="WCokH3vuHozdB8c-ti5Q-75" style="endArrow=none;html=1;rounded=0;strokeWidth=2;fontSize=15;" target="WCokH3vuHozdB8c-ti5Q-77" value="1 has 1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-92" edge="1" parent="1" source="WCokH3vuHozdB8c-ti5Q-79" style="endArrow=none;html=1;rounded=0;strokeWidth=2;fontSize=15;" target="WCokH3vuHozdB8c-ti5Q-81" value="1 assigned to 0..1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-93" edge="1" parent="1" source="WCokH3vuHozdB8c-ti5Q-78" style="endArrow=none;html=1;rounded=0;strokeWidth=2;fontSize=15;" target="WCokH3vuHozdB8c-ti5Q-81" value="1 handles 0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-94" edge="1" parent="1" source="WCokH3vuHozdB8c-ti5Q-81" style="endArrow=open;html=1;rounded=0;strokeWidth=2;dashed=1;fontSize=15;" target="WCokH3vuHozdB8c-ti5Q-86" value="uses">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-95" edge="1" parent="1" source="WCokH3vuHozdB8c-ti5Q-86" style="endArrow=open;html=1;rounded=0;strokeWidth=2;dashed=1;fontSize=15;" target="WCokH3vuHozdB8c-ti5Q-76" value="notifies">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-96" edge="1" parent="1" source="WCokH3vuHozdB8c-ti5Q-86" style="endArrow=open;html=1;rounded=0;strokeWidth=2;dashed=1;fontSize=15;" target="WCokH3vuHozdB8c-ti5Q-78" value="notifies">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-97" edge="1" parent="1" source="WCokH3vuHozdB8c-ti5Q-83" style="endArrow=open;html=1;rounded=0;strokeWidth=2;dashed=1;fontSize=15;" target="WCokH3vuHozdB8c-ti5Q-75" value="manages">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-98" edge="1" parent="1" source="WCokH3vuHozdB8c-ti5Q-84" style="endArrow=open;html=1;rounded=0;strokeWidth=2;dashed=1;fontSize=15;" target="WCokH3vuHozdB8c-ti5Q-79" value="manages">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-99" edge="1" parent="1" source="WCokH3vuHozdB8c-ti5Q-84" style="endArrow=open;html=1;rounded=0;strokeWidth=2;dashed=1;fontSize=15;" target="WCokH3vuHozdB8c-ti5Q-80" value="manages">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-100" edge="1" parent="1" source="WCokH3vuHozdB8c-ti5Q-85" style="endArrow=open;html=1;rounded=0;strokeWidth=2;dashed=1;fontSize=15;" target="WCokH3vuHozdB8c-ti5Q-77" value="reads">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-101" edge="1" parent="1" source="WCokH3vuHozdB8c-ti5Q-82" style="endArrow=open;html=1;rounded=0;strokeWidth=2;dashed=1;fontSize=15;" target="WCokH3vuHozdB8c-ti5Q-87" value="uses">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-102" edge="1" parent="1" source="WCokH3vuHozdB8c-ti5Q-83" style="endArrow=open;html=1;rounded=0;strokeWidth=2;dashed=1;fontSize=15;" target="WCokH3vuHozdB8c-ti5Q-87" value="uses">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-103" edge="1" parent="1" source="WCokH3vuHozdB8c-ti5Q-84" style="endArrow=open;html=1;rounded=0;strokeWidth=2;dashed=1;fontSize=15;" target="WCokH3vuHozdB8c-ti5Q-87" value="uses">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCokH3vuHozdB8c-ti5Q-104" edge="1" parent="1" source="WCokH3vuHozdB8c-ti5Q-85" style="endArrow=open;html=1;rounded=0;strokeWidth=2;dashed=1;fontSize=15;" target="WCokH3vuHozdB8c-ti5Q-87" value="uses">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
